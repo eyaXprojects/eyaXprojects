@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>eyaX</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #290000;
+    color: #e8d5d5;
+    font-family: 'Courier New', Courier, monospace;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .logo {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+    color: #a81414;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    max-width: 560px;
+    line-height: 1.8;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .contrib {
+    color: #a81414;
+    font-weight: bold;
+  }
+
+  .preview {
+    max-width: 800px;
+    width: 100%;
+    border: 1px solid #5c0505;
+    margin: 2rem 0 0.5rem 0;
+  }
+
+  .preview-caption {
+    font-size: 0.8rem;
+    color: #7a5555;
+    margin-bottom: 2rem;
+  }
+
+  .todo {
+    margin: 2rem 0;
+    max-width: 560px;
+    width: 100%;
+    text-align: left;
+    border: 1px solid #5c0505;
+    padding: 1.5rem;
+  }
+
+  .todo h2 {
+    color: #a81414;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .todo ul {
+    list-style: none;
+  }
+
+  .todo li {
+    padding: 0.35rem 0;
+    border-bottom: 1px dotted #4a1010;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .todo li:last-child {
+    border-bottom: none;
+  }
+
+  .status-not-done {
+    color: #d93a3a;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .status-incomplete {
+    color: #c97b2b;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  a.button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 2rem;
+    border: 1px solid #a81414;
+    color: #e8d5d5;
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+    transition: background-color 0.2s, color 0.2s;
+  }
+
+  a.button:hover {
+    background-color: #a81414;
+    color: #290000;
+  }
+
+  footer {
+    margin-top: 3rem;
+    font-size: 0.8rem;
+    color: #7a5555;
+  }
+</style>
+</head>
+<body>
+
+  <!-- eyaX logo -->
+  <svg class="logo" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="400" cy="400" r="330" fill="none"
+            stroke="#8a1010" stroke-width="110"
+            stroke-dasharray="330 90" stroke-dashoffset="0"/>
+    <circle cx="400" cy="400" r="235" fill="none"
+            stroke="#5c0505" stroke-width="105"
+            stroke-dasharray="260 105" stroke-dashoffset="130"/>
+    <circle cx="400" cy="400" r="185" fill="#5c0505"/>
+  </svg>
+
+  <h1>eyaX</h1>
+
+  <p>
+    eyaX is an operating system project. For now, it features a shell
+    with commands and a framebuffer console.
+  </p>
+
+  <p class="contrib">
+    eyaX is up for contribution &mdash; everyone is welcome to help.
+  </p>
+
+  <!-- Preview screenshot -->
+  <img class="preview" src="https://private-user-images.githubusercontent.com/333793323/658946501-a761f817-ddbd-4cfa-967e-7be2bc6d343d.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTA0MTQ0OTAsIm5iZiI6MTc5MDQxNDE5MCwicGF0aCI6Ii8zMzM3OTMzMjMvNjU4OTQ2NTAxLWE3NjFmODE3LWRkYmQtNGNmYS05NjdlLTdiZTJiYzZkMzQzZC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwOTI2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDkyNlQwOTE2MzBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yYzRiMjU5NTRlMDU4YTVmODQ5YTQ3ODBkMmNlMjI5Y2U1NDQzNTY2YjA1MDg1YTNmN2QyOGE0ZjdiN2E1MjM5JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZwbmcifQ.PbkhM7ynf7porpnXBCEypsZtKmDbRFzXV3zCYK0lytE" alt="eyaX running in QEMU — framebuffer console with shell commands">
+  <div class="preview-caption">eyaX running in QEMU (kernel beta 0.1)</div>
+
+  <!-- Incomplete things -->
+  <div class="todo">
+    <h2>Incomplete &mdash; things you can help fix:</h2>
+    <ul>
+      <li><span>Filesystem</span><span class="status-not-done">NOT DONE</span></li>
+      <li><span>Shell echo command</span><span class="status-incomplete">INCOMPLETE</span></li>
+      <li><span>System calls</span><span class="status-not-done">NOT DONE</span></li>
+      <li><span>Userland Execution</span><span class="status-not-done">NOT DONE</span></li>
+      <li><span>ELF Loader</span><span class="status-not-done">NOT DONE</span></li>
+      <li><span>Paging / Virtual Memory</span><span class="status-not-done">NOT DONE</span></li>
+      <li><span>Physical Memory Allocator</span><span class="status-not-done">NOT DONE</span></li>
+    </ul>
+  </div>
+
+  <a class="button" href="https://github.com/eyaXprojects/eyaX" target="_blank" rel="noopener">
+    View on GitHub
+  </a>
+
+  <footer>eyaX &mdash; https://github.com/eyaXprojects/eyaX</footer>
+
+</body>
+</html>

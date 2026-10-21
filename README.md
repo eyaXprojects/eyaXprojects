@@ -3,3 +3,6 @@
 ## eyaXprojects
 eyaXprojects is a Github collection of software as well as the eyaX kernel. An operating system based on the Limine bootloader.
 
+## Donate
+eyaXprojects is a solo-organization, meaning it's only held by one person. Donations are strongly strongly STRONGLY appreciated.
+
